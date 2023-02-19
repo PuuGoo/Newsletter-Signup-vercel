@@ -38,7 +38,7 @@ app.post("/",(req,res) => {
     const url = "https://us18.api.mailchimp.com/3.0/lists/b9902bef7a";
     const options = {
         method: "POST",
-        auth: "PuuGoo:24dce4d9a9deaf0ae1137774b0576d6f-us1"
+        auth: "PuuGoo:24dce4d9a9deaf0ae1137774b0576d6f-us18"
     };
     const request = https.request(url, options, (response) => {
         if (response.statusCode === 200) {
@@ -75,3 +75,6 @@ app.listen(process.env.PORT || 3000, () => {
 // git commit -m "first commit
 // heroku create : tạo và đăng nhập theo hướng dẫn 
 // git push heroku master : This will push local version that's been stored using git to Hroku
+// https://thawing-mountain-65576.herokuapp.com/
+// Nếu không có heroku , node, express sẽ mất 1-2 tháng để viết code và 2 tháng để xây dựng own server stack(hệ thống)
+// heroku logs : Nếu bạn gặp bất kỳ vấn đề nào khi thực hiện bất kỳ điều gì trong số đố hãy đảm bảo rằng bạn kiểm tra nhật ký và nó thường cho bạn tháy dấu hiệu về những gì có thể đã xảy ra
